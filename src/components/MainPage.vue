@@ -2,7 +2,7 @@
 <template>
   
   <div id="mainBanner" class="pc">
-    <img class="logo" :src="logoImage"  alt="Logo" />
+    <img class="logo" :src="sharedData.logoImage"  alt="Logo" />
     <div class="main_text">
       <div class="left">
             <div class="main_top_bottom"></div>
@@ -15,10 +15,10 @@
                 <li>
                   <router-link to="/projects">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ltr-0 e1mhci4z1" data-name="Play" aria-hidden="true"><path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z" fill="currentColor"></path></svg>
-                    <span>{{ buttonText }}</span>
+                    <span>{{ sharedData.buttonText }}</span>
                   </router-link>
                 </li>
-                <li><router-link to="/skill">{{ skillLinkText }}</router-link></li>
+                <li><router-link to="/skill">{{ sharedData.skillLinkText }}</router-link></li>
             </ul>
       </div>
       
@@ -28,7 +28,7 @@
   </div>
   <div id="mainBanner_mobile" class="mo">
     <!--   --->
-    <img class="logo" :src="logoImage_mobile"  alt="Logo" />
+    <img class="logo" :src="sharedData.logoImage_mobile"  alt="Logo" />
     <div class="main_text">
       <div class="left">
             <div class="main_top_bottom"></div>
@@ -41,10 +41,10 @@
                 <li>
                   <router-link to="/projects">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ltr-0 e1mhci4z1" data-name="Play" aria-hidden="true"><path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z" fill="currentColor"></path></svg>
-                    <span>{{ buttonText }}</span>
+                    <span>{{ sharedData.buttonText }}</span>
                   </router-link>
                 </li>
-                <li><router-link to="/skill">{{ skillLinkText }}</router-link></li>
+                <li><router-link to="/skill">{{ sharedData.skillLinkText }}</router-link></li>
             </ul>
       </div>
    
@@ -54,11 +54,11 @@
 
 
   <section id="section02" class="portfolio-section">
-    <h3 class="f1 b4 pb1">{{ section02Title }}</h3>
+    <h3 class="f1 b4 pb1">{{ sharedData.section02Title }}</h3>
     <div>
-      <swiper :swiperOptions="swiperOptions">
+      <swiper :swiperOptions="sharedData.swiperOptions">
         <template v-slot:wrapper>
-          <swiper-slide v-for="(item, index) in slides02" :key="index">
+          <swiper-slide v-for="(item, index) in sharedData.slides02" :key="index">
             <img :src="item.img" :alt="'Slide ' + (index + 1)" />
           </swiper-slide>
         </template>
@@ -68,11 +68,11 @@
   </section>
   
   <section id="section01" class="portfolio-section">
-    <h3 class="f1 b4 pb1">{{ section01Title }}</h3>
+    <h3 class="f1 b4 pb1">{{ sharedData.section01Title }}</h3>
     <div>
-      <swiper :swiperOptions="swiperOptions">
+      <swiper :swiperOptions="sharedData.swiperOptions">
         <template v-slot:wrapper>
-          <swiper-slide v-for="(item, index) in slides01" :key="index">
+          <swiper-slide v-for="(item, index) in sharedData.slides01" :key="index">
             <img :src="item.img" :alt="'Slide ' + (index + 1)" />
           </swiper-slide>
         </template>
@@ -88,21 +88,21 @@
     <h3 class="b4 pb2 pt2">Contact</h3>
     <ul class="contact-list">
       <!-- 깃허브 -->
-      <li class="contact-item" v-if="contactInfo">
-        <a :href="contactInfo[3].href" class="contact-link">
-          <font-awesome-icon :icon="contactInfo[3].icon" />
+      <li class="contact-item" v-if="sharedData.contactInfo">
+        <a :href="sharedData.contactInfo[3].href" class="contact-link">
+          <font-awesome-icon :icon="sharedData.contactInfo[3].icon" />
         </a>
       </li>
       <!-- 이메일 -->
-      <li class="contact-item" v-if="contactInfo">
-        <a :href="contactInfo[0].href" class="contact-link">
-          <font-awesome-icon :icon="contactInfo[0].icon" />
+      <li class="contact-item" v-if="sharedData.contactInfo">
+        <a :href="sharedData.contactInfo[0].href" class="contact-link">
+          <font-awesome-icon :icon="sharedData.contactInfo[0].icon" />
         </a>
       </li>
       <!-- 전화번호 -->
-      <li class="contact-item" v-if="contactInfo">
-        <a :href="contactInfo[1].href" class="contact-link">
-          <font-awesome-icon :icon="contactInfo[1].icon" />
+      <li class="contact-item" v-if="sharedData.contactInfo">
+        <a :href="sharedData.contactInfo[1].href" class="contact-link">
+          <font-awesome-icon :icon="sharedData.contactInfo[1].icon" />
         </a>
       </li>
     </ul>
@@ -118,118 +118,86 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css/bundle";
 import { gsap } from "gsap";
-import {  ScrollTrigger } from 'gsap/all'
+import { ScrollTrigger } from 'gsap/all';
+
+// GSAP의 ScrollTrigger 플러그인을 등록합니다.
 gsap.registerPlugin(ScrollTrigger);
+
 export default {
-  mounted() {
-    console.log({
-      contactInfo: this.contactInfo,
-      selectedSlide: this.selectedSlide,
-      logoImage: this.logoImage,
-      logoImage_mobile: this.logoImage_mobile,
-      buttonText: this.buttonText,
-      skillLinkText: this.skillLinkText,
-      section01Title: this.section01Title,
-      section02Title: this.section02Title,
-      swiperOptions: this.swiperOptions,
-      slides01: this.slides01,
-      slides02: this.slides02,
-      slides03: this.slides03,
-      slides04: this.slides04,
-      slides05: this.slides05,
-      slides06: this.slides06
-    });
-    
-   
-    this.fadeInAnimation(document.querySelector("#section01 h3"), 1); // 1초 지속
-this.fadeInAnimation(document.querySelector("#section02 h3"), 1.5); // 1.5초 지속
-
-this.fadeInAnimation02(document.querySelectorAll('#section01 .swiper-wrapper .swiper-slide img'), document.querySelector('#section01 .swiper-wrapper'), 0.7, 0.2); // 각 슬라이드는 0.7초 지속, 슬라이드 간 0.2초 딜레이
-this.fadeInAnimation02(document.querySelectorAll('#section02 .swiper-wrapper .swiper-slide img'), document.querySelector('#section02 .swiper-wrapper'), 0.8, 0.25); // 각 슬라이드는 0.8초 지속, 슬라이드 간 0.25초 딜레이
-this.fadeInAnimation(document.querySelector(".link_button"), 4); // 2초 지속
-this.fadeInAnimation(document.querySelector(".contact-section"), 2.5); // 2.5초 지속
-
-
-    this.$nextTick(() => {
-    gsap.from("#mainBanner", { duration: 1, y: -50, opacity: 0 }); // 변경된 부분
-    gsap.from("#mainBanner_mobile", { duration: 1, y: -50, opacity: 0 }); // 변경된 부분
-  });
-}
-,
-
-  methods: {
-
-    fadeInAnimation02(elements, triggerElement, duration, delay) {
-  elements.forEach((element, index) => {
-    gsap.from(element, {
-      x: '-100%', // 시작 시 X축 위치 (왼쪽)
-      opacity: 0, // 시작 시 투명도는 0 (완전히 투명)
-      duration: duration, // 지속 시간
-      delay: index * delay, // 딜레이 시간
-      scrollTrigger: {
-        trigger: triggerElement,
-        start: 'top bottom',
-        end: 'bottom top',
-        toggleActions: 'play none none reverse', 
-      }
-    });
-  });
-},
-
-  fadeInAnimation(h3s,time) {
-    
-    gsap.from(h3s, {
-      scrollTrigger: {
-        trigger: h3s,
-        start: "top 80%",
-        end: "top 20%",
-        scrub: true,
-      },
-      opacity: 0,
-      duration: time,
-    });
-  },
-
-
-
-  },
-
+  name: 'MainPage',
+  
+  // 컴포넌트에서 사용할 외부 컴포넌트를 등록합니다.
   components: {
     Swiper,
     SwiperSlide
   },
-  name: 'MainPage',
+
+  // 부모 컴포넌트로부터 받는 props를 정의합니다.
   props: {
-  contactInfo: Array,
-  selectedSlide: Object,
-  logoImage: String,
-  logoImage_mobile: String,
-  buttonText: String,
-  skillLinkText: String,
-  section01Title: String,
-  section02Title: String,
-  swiperOptions: Object,
-  slides01: Array,
-  slides02: Array,
-  slides03: Array,
-  slides04: Array,
-  slides05: Array,
-  slides06: Array
-},
+    'sharedData': Object, // props 이름은 대시(-) 대신 카멜케이스를 사용해야 합니다.
+  },
 
-  data() {
-    return {
+  mounted() {
+    console.log(this.sharedData); // 'shared-data' props의 값을 콘솔에 출력
+    // 섹션 제목에 대한 페이드인 애니메이션을 적용합니다.
+    this.fadeInAnimation(document.querySelector("#section01 h3"), 1);
+    this.fadeInAnimation(document.querySelector("#section02 h3"), 1.5);
 
-    
+    // 슬라이더 이미지에 대한 페이드인 애니메이션을 적용합니다.
+    this.fadeInAnimationForSlides('#section01 .swiper-wrapper', 0.7, 0.2);
+    this.fadeInAnimationForSlides('#section02 .swiper-wrapper', 0.8, 0.25);
 
+    // 링크 버튼과 연락처 섹션에 대한 페이드인 애니메이션을 적용합니다.
+    this.fadeInAnimation(document.querySelector(".link_button"), 4);
+    this.fadeInAnimation(document.querySelector(".contact-section"), 2.5);
 
+    // 메인 배너에 대한 애니메이션을 적용합니다.
+    this.$nextTick(() => {
+      gsap.from("#mainBanner", { duration: 1, y: -50, opacity: 0 });
+      gsap.from("#mainBanner_mobile", { duration: 1, y: -50, opacity: 0 });
+    });
+  },
 
-    };
+  methods: {
+    fadeInAnimation(element, duration) {
+      gsap.from(element, {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: true,
+        },
+        opacity: 0,
+        duration: duration,
+      });
+    },
+
+    fadeInAnimationForSlides(selector, duration, delay) {
+      const elements = document.querySelectorAll(`${selector} .swiper-slide img`);
+      const triggerElement = document.querySelector(selector);
+      
+      elements.forEach((element, index) => {
+        gsap.from(element, {
+          x: '-100%',
+          opacity: 0,
+          duration: duration,
+          delay: index * delay,
+          scrollTrigger: {
+            trigger: triggerElement,
+            start: 'top bottom',
+            end: 'bottom top',
+            toggleActions: 'play none none reverse',
+          }
+        });
+      });
+    },
   },
 };
 </script>
 
-<style scoped>.link_button {
+
+<style scoped>
+.link_button {
   background-color: #fff;
   border-radius: 5px;
   color: #000;

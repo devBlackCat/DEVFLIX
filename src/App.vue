@@ -39,6 +39,7 @@ export default {
   data() {
     return {
 
+
       contactInfo: [
       {
         type: 'email', // 연락처 유형 (이메일)
@@ -63,7 +64,20 @@ export default {
         icon: ['fab', 'github'], // Font Awesome 아이콘 클래스명 
         value: 'devBlackCat', //  깃허브 사용자명
         href: 'https://github.com/devBlackCat' // 깃허브 프로필 링크
+      },
+      {
+        type: 'website',
+        icon: ['fas', 'globe'],
+        value: 'Visit my site',
+        href: 'http://dogmbti.site'
+      },
+      {
+        type: 'resume',
+        icon: ['fas', 'file'],
+        value: 'View my resume',
+        href: '/curriculum_vitae.pdf'
       }
+
     ],
       selectedSlide: {
       img: "",

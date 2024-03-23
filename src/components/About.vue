@@ -9,32 +9,25 @@
           <h2  class="f7 b3 mb3">Novice Full Stack Developer</h2>
 
           <ul>
-            <li className="mb0_5">
-              <a className="flex" href="mailto:happycat_91@naver.com">
-                <span class="icons"><font-awesome-icon  icon="envelope" /></span> 
-                <span class="pl1">happycat_91@naver.com</span>
+            <li v-for="(info, index) in limitedContactInfo" :key="index" class="mb0_5 flex">
+              <a :href="info.href" class="flex">
+                <span class="icons"><font-awesome-icon :icon="info.icon" /></span>
+                <span class="pl1">{{ info.value }}</span>
               </a>
             </li>
-
-            <li className="mb0_5">
-              <a className="flex" href="tel:010-5179-7530">
-                <span class="icons"><font-awesome-icon icon="mobile-alt" /> </span> 
-                <span class="pl1">010-5179-7530</span>
-              </a>
-            </li>
-
-            <li className="flex">
-              <span className="icons"><font-awesome-icon icon="map-marker-alt" /> </span> 
-              <span className="pl1">경기도 김포시 구래동</span>
-            </li>
-
-
           </ul>
+
+      
 
           <ul className="mt2 flex ml0_4">
-            <li className="mr1"><a href="https://post.dev-blog.store/" target="_blank"><font-awesome-icon :icon="['fab', 'blogger-b']" /></a></li>
-            <li><a href="https://github.com/devBlackCat" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a></li>
+            <li v-for="(info, index) in limitedContactInfo02" :key="index" class="mr1">
+              <a :href="info.href" target="_blank">
+                <span class="icons"><font-awesome-icon :icon="info.icon" /></span>
+             
+              </a>
+            </li>
           </ul>
+
 
         </li>
         <li className="banner_profile">
@@ -97,6 +90,19 @@ export default {
   this.fadeInAnimation05(document.querySelectorAll('.about_do li'),document.querySelectorAll('.about_do'));
 },
   name: 'BannerComponent',
+  props: {
+    sharedData: Object
+    //contactInfo
+  },
+  computed: {
+    limitedContactInfo() {
+      return this.sharedData.contactInfo.slice(0, 3);
+    },
+    limitedContactInfo02() {
+      //뒤에서 3개만 가져오기
+      return this.sharedData.contactInfo.slice(-3);
+    },
+  },
   data() {
     return {
       logoImage: require("@/assets/about_banner.webp"),
