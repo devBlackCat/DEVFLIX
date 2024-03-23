@@ -4,6 +4,9 @@ html{
 
     --container_width: 90vw;
 
+    width: 100%;
+    overflow-x: hidden;
+
 
 }
 .apexcharts-toolbar{display: none !important;}

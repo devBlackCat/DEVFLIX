@@ -175,7 +175,8 @@ export default {
 </script>
 
 <style scoped>
-.banner {
+
+    .banner {
   position: relative;
   height: 80vh;
   background-attachment: fixed;
