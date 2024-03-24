@@ -210,6 +210,11 @@ export default {
   margin: 0 auto;
   margin-top: 3rem;
 }
+.link_button:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
 
 #mainBanner .main_text {
   position: absolute;
@@ -272,6 +277,12 @@ export default {
 .greetings {
   max-width: 300px;
   width: 100%;
+  /*애니메이션 시간*/
+  transition: all 0.4s ease-in-out;
+
+}
+.greetings:hover{
+  transform: scale(1.1);
 
 }
 
@@ -312,6 +323,10 @@ export default {
 .contact-item {
   margin: 0 2rem;
   /* 항목 사이의 간격 */
+}
+.contact-item:hover{
+  opacity: 0.6;
+
 }
 
 .contact-link,
@@ -482,14 +497,9 @@ export default {
   max-height: 188px;
 }
 
-.swiper-slide img {
-  /* 이미지 살짝 커지는 애니메이션 */
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
-}
 
-.swiper-slide img:hover {
-  transform: scale(1.1);
+.swiper-slide:hover {
+  opacity: 0.6;
 }
 
 .portfolio_modal {
@@ -584,6 +594,10 @@ export default {
 
   .swiper-slide {
       width: calc(100% / 4 - 5px) !important;
+  }
+
+  .contact-section{
+  margin-top: 0;
   }
 }
 

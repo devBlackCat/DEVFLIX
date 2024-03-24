@@ -36,7 +36,7 @@ text{
     width: calc(33% - 1rem);
 }
 .l1{line-height: 1rem;} .l2{line-height: 1.2rem;} .l3{line-height: 1.4rem;} .l4{line-height: 1.6rem;} .l5{line-height: 1.8rem;} .l6{line-height: 2rem;} .l7{line-height: 2.2rem;} .l8{line-height: 2.4rem;} .l9{line-height: 2.6rem;} .l10{line-height: 2.8rem;} .l11{line-height: 3rem;} .l12{line-height: 3.2rem;} .l13{line-height: 3.4rem;} .l14{line-height: 3.6rem;} .l15{line-height: 3.8rem;} .l16{line-height: 4rem;} .l17{line-height: 4.2rem;} .l18{line-height: 4.4rem;} .l19{line-height: 4.6rem;} .l20{line-height: 4.8rem;} .l21{line-height: 5rem;} .l22{line-height: 5.2rem;} .l23{line-height: 5.4rem;} .l24{line-height: 5.6rem;} .l25{line-height: 5.8rem;} .l26{line-height: 6rem;} .l27{line-height: 6.2rem;} .l28{line-height: 6.4rem;} .l29{line-height: 6.6rem;} .l30{line-height: 6.8rem;}
-.w10{width:10%} .w20{width:20%} .w30{width:30%} .w40{width:40%} .w50{width:50%} .w60{width:60%} .w70{width:70%} .w80{width:80%} .w90{width:90%} .w100{width:100%}
+.w10{width:10%} .w20{width:20%} .w30{width:30%} .w40{width:40%} .w50{width:50%} .w60{width:60%} .w70{width:70%} .w80{width:80%} .w90{width:90%} .w100{width:100%} .w95{width:95%} .w85{width:85%} .w75{width:75%} .w65{width:65%} .w55{width:55%} .w45{width:45%} .w35{width:35%} .w25{width:25%} .w15{width:15%} .w5{width:5%} .w2{width:2%} .w1{width:1%}
 .f05{font-size:.5rem}
 .f06{font-size:.6rem}
 .f07{font-size:.7rem}
@@ -1015,7 +1015,7 @@ img {
 }
 
 
-.m_center {
+.m_center ,.auto{
     margin: 0 auto;
 }
 

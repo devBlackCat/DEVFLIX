@@ -6,7 +6,7 @@
         <li className="banner_title">
           <button type="button" className="mbti f4 button01">INTP-T</button>
           <h1 class="f13">ByungHoon Jun</h1>
-          <h2  class="f7 b3 mb3">Novice Full Stack Developer</h2>
+          <h2  class="f7 b3 mb3">Novice Developer</h2>
 
           <ul>
             <li v-for="(info, index) in limitedContactInfo" :key="index" class="mb0_5 flex">
