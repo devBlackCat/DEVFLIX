@@ -363,6 +363,11 @@ width: fit-content;
   display: inline-block;
   margin-right: 0.5rem;
 }
+.lang:hover{
+  background-color: #000;
+  color: #fff;
+  border:1px solid #fff;
+}
 
 .lang:last-child{
   margin-right: 0 !important;
