@@ -130,7 +130,7 @@
       <ul v-else class="pl2 pb1 f09">
         <li>{{ selectedSlide.info }}</li>
       </ul>
-      <p class="pl2 pb1 f09" v-if="selectedSlide.git" >깃허브 : <a :href="selectedSlide.git" target="_blank" ><font-awesome-icon :icon="['fab', 'github']" style="font-size: 1.5rem;"/></a></p>
+      <p class="pl2 pb1 f09" v-if="selectedSlide.git" >깃허브 : <a :href="selectedSlide.git" target="_blank" ><font-awesome-icon :icon="['fab', 'github']" style="font-size: 1.5rem;position: relative; top: 3px; left: 2px;"/></a></p>
 
      
    
@@ -302,7 +302,7 @@ width: 100%; /* Full width */
 height: 100%; /* Full height */
 overflow: auto; /* Enable scroll if needed */
 padding-top:11vh;
-background-color: rgba(0,0,0,.6); /* Black w/ opacity */
+background-color: rgba(0,0,0,.9); /* Black w/ opacity */
               }
 
  .modal-content {

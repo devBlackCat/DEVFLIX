@@ -174,13 +174,12 @@ export default {
 
       ]
       ,slides05:[
+      { img : require("@/assets/10.webp"), title : "연세인몰",lang : "HTML, CSS, JS, PHP,MYSQL", description : "쇼핑몰 티켓 개발 시스템 개발" ,type : "홈페이지 기능 개발" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" ,info :['이전 선물하기 시스템은 결제시 보조서버로 데이터를 전달하는데 이 시스템을 튜닝','보조서버에서 전달받은 주문데이터를 보조서버 DB에 넣고 티켓을 발송 개발','관리자에서 티켓 생성 및 추가하고 엑셀로 받고 수동 발송시스템 구축'], git:""},
+      { img : require("@/assets/14.webp"), title : "저스틴케이터링", lang : "HTML, CSS, JS ,PHP,MYSQL", description : "컨텐츠 추가 및 관리 유지보수[매달 진행]", type : "홈페이지 유지보수" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" ,info :"주기적인 컨텐츠 추가 작업, 메뉴 DB 등록및 수정 , 트래픽 관리, 퍼블리싱", git:""},
+      { img : require("@/assets/21.webp"), title : "하베스트 아카데미", lang : "HTML, CSS, JS ,PHP,MYSQL", description : "홈페이지 수정 및 관리" , type : "홈페이지 유지보수" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" , info : "시스템 오류 수정, 수정 및 추가내역 개발" , git:""},
+      { img : require("@/assets/20.webp"), title : "OWO", lang : "HTML, CSS, JS", description : "워드프레스로 만든 반응형 사이트" ,type : "홈페이지 제작" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" , info : "테마 : Salient", git:""},
       { img : require("@/assets/18.webp"), title : "티셔츠 쇼핑몰", lang : "HTML, CSS, JS", description : "고도몰로 만든 쇼핑몰" ,  type : "쇼핑몰 제작" , env : "개발환경 : Linux 2.6X이상 , PHP 5.6 , MYSQL 5.6" , info : "CMS 쇼핑몰 " , git:""},
       { img : require("@/assets/19.webp"), title : "ISLE GYM", lang : "HTML, CSS, JS", description : "워드프레스로 만든 반응형 사이트" , type : "홈페이지 제작" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" , info : "테마 : Salient", git:""},
-      { img : require("@/assets/20.webp"), title : "OWO", lang : "HTML, CSS, JS", description : "워드프레스로 만든 반응형 사이트" ,type : "홈페이지 제작" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" , info : "테마 : Salient", git:""},
-      { img : require("@/assets/10.webp"), title : "연세인몰", lang : "HTML, CSS, JS", description : "쇼핑몰 결제한 티켓 발송 및 관리자 시스템" , type : "개발" , env : "개발환경 : Linux 2.6X이상 , PHP 5.6 , MYSQL 5.6" , info : "CMS 쇼핑몰 " , git:""},
-      { img : require("@/assets/14.webp"), title : "저스틴케이터링", lang : "HTML, CSS, JS ,PHP,MYSQL", description : "컨텐츠 추가 및 관리 유지보수", type : "홈페이지 유지보수" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" ,info :"PHP를 이용한 맞춤형 웹 사이트", git:""},
-      { img : require("@/assets/21.webp"), title : "하베스트 아카데미", lang : "HTML, CSS, JS ,PHP,MYSQL", description : "홈페이지 수정 및 관리" , type : "홈페이지 유지보수" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" , info : "테마 : Elementor " , git:""},
-      { img : require("@/assets/25.webp"), title : "저스틴 케이터링" , lang : "HTML, CSS, JS, PHP", description : "[개인외주] 고도몰에서 보조서버로 데이터 전달하는 이전 선물하기 알림 기능을 이용한 새로운 티켓 전송 시스템 및 관리자 구축" ,type : "홈페이지 유지보수" , env : "개발환경 : Linux CentOS7 , PHP 7.4 , MYSQL" ,info :"PHP를 이용한 맞춤형 웹 사이트", git:""},
 
       ]
      
