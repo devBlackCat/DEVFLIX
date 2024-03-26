@@ -143,7 +143,7 @@ export default {
       slides02:[
       { img : require("@/assets/23.webp"), title : "DEVFLIX" , lang : "Vue, Node.js", description : "Vue.js를 이용한 넷플릭스를 컨셉으로 만든 포트폴리오 사이트", type : "포트폴리오" , env : "개발환경 : Linux CentOS7 , 가상호스트, Node.js, Vue.js" , info : ['넷플릭스 컨셉의 포트폴리오 사이트','Vue.js를 이용한 SPA 사이트'] , git:"https://github.com/devBlackCat/devflix"},
       { img : require("@/assets/24.webp"), title : "DogMBTI" , lang : "vue,Django[REST],SQLite", description : "유저의 MBTI를 받아서 가장 알맞는 강아지 견종을 추천해주는 사이트", type : "포트폴리오" , env : "개발환경 : Linux CentOS7 , 가상호스트, Django, SQLite" ,info : ['장고와 장고 REST를 사용한 사이트','SQLite로 수집한 강아지 데이터와 강아지 성격을 AI를 활용해 MBIT 데이터로 수집', 'MBTI 궁합을 분석해서 나에게 가장 알맞는 견종 추천'] , git:"https://github.com/devBlackCat/DogMBTI"},
-      { img : require("@/assets/26.webp"), title : "MyFileChat" , lang : "PHP, React Naive", description : "내가 직접 사용하기 위한 파일이나 이미지나 글을 채팅식으로 옮길수있는 앱", type : "포트폴리오" , env : "개발환경 : Linux CentOS7 , 가상호스트, Django, SQLite" , info : ['핸드폰이나 다른기기간 갤럭시의 경우 자료전달이 불편해 직접 사용하기 위해 만든 앱','나만 쓸수 있는 채팅으로 자신의 서버 주소를 넣어서 사용할수있음','apk 파일만 가지고 있으면 사용할 수 있고 채팅, 파일 첨부, 사진 업로드 전송 가능'], git:"https://github.com/devBlackCat/MyFileChat"},
+      { img : require("@/assets/26.webp"), title : "MyFileChat" , lang : "PHP, React Naive,React,PyQt5", description : "내가 직접 사용하기 위한 파일이나 이미지나 글을 채팅식으로 옮길수있는 앱/웹", type : "포트폴리오 앱/웹/프로그램" , env : "개발환경 : Linux CentOS7 , 가상호스트, Django, SQLite" , info : ['핸드폰이나 다른기기간 갤럭시의 경우 자료전달이 불편해 직접 사용하기 위해 만든 앱','나만 쓸수 있는 채팅으로 자신의 서버 주소를 넣어서 사용할수있음','apk 파일만 가지고 있으면 사용할 수 있고 채팅, 파일 첨부, 사진 업로드 전송 가능'], git:"https://github.com/devBlackCat/MyFileChat"},
       ],
 
       slides03:[

@@ -41,7 +41,7 @@ export default {
       mobilebanner :require("@/assets/skill_banner_mobile.webp"),
       
       series: [{
-        data: [100, 80 , 80 ,60 ,50 , 65 ,60 , 50 , 70 ,35 , 75 , 10 , 80 , 30 , 20 , 80 , 40 , 30, 50],
+        data: [100, 80 , 80 ,60 ,50 , 65 ,60 , 50 , 70 ,35 , 75 , 10 , 80 , 30 , 20 , 80 , 40 , 30, 50,20],
       }],
       
       chartOptions: {
@@ -85,7 +85,7 @@ export default {
         xaxis:{
 
          
-          categories:['HTML','CSS','Javascript','Vue.js','React.js','Node.js','Django','python','PHP','Laravel','MySQL','Typescript','jQuery','Bootstrap','Sass','Git','Linux','Apache','Express.js'],
+          categories:['HTML','CSS','Javascript','Vue.js','React.js','Node.js','Django','python','PHP','Laravel','MySQL','Typescript','jQuery','Bootstrap','Sass','Git','Linux','Apache','Express.js','PyQt5'],
         }
       },
       
